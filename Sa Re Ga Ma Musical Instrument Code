@@ -1,0 +1,37 @@
+## 🖥️ Arduino Code
+```cpp
+int ldr1=A0;
+int ldr2=A1;
+int ldr3=A2;
+int ldr4=A3;
+int ldr5=A4;
+int ldr6=A5;
+int ldr7=A6;
+int ldr8=A7;
+
+int del = 100; // Threshold
+int v=0, a=0, b=0, c=0, d=0, e=0, f=0, g=0;
+
+void setup() {
+  Serial.begin(9600);
+}
+
+void loop() {
+  v=analogRead(ldr1);
+  a=analogRead(ldr2);
+  b=analogRead(ldr3);
+  c=analogRead(ldr4);
+  d=analogRead(ldr5);
+  e=analogRead(ldr6);
+  f=analogRead(ldr7);
+  g=analogRead(ldr8);
+
+  if(v>del) tone(11,240,500); // Sa
+  if(a>del) tone(11,270,500); // Re
+  if(b>del) tone(11,300,500); // Ga
+  if(c>del) tone(11,337,500); // Ma
+  if(d>del) tone(11,360,500); // Pa
+  if(e>del) tone(11,400,500); // Dha
+  if(f>del) tone(11,450,500); // Ni
+  if(g>del) tone(11,480,500); // Sa'
+}
