@@ -1,5 +1,3 @@
-## 🖥️ Arduino Code
-```cpp
 int ldr1=A0;
 int ldr2=A1;
 int ldr3=A2;
